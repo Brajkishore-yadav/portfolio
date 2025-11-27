@@ -1,0 +1,88 @@
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brajkishore Yadav — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header glassy">
+    <div class="container header-inner">
+      <h1 class="logo">Brajkishore<span>Yadav</span></h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-content">
+      <h2 class="hero-title">Hi, I’m <span class="accent">Brajkishore Yadav</span></h2>
+      <p class="hero-sub">AI/ML Engineer & Full Stack Developer building modern, fast and intelligent applications.</p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="#projects">Explore Projects</a>
+        <a class="btn-outline" href="./resume-3.pdf" target="_blank">View Resume</a>
+      </div>
+      <div class="tech-stack">
+        <span>Python</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>AI/ML</span><span>PyTorch</span>
+      </div>
+    </div>
+    <div class="profile-card glassy">
+      <div class="avatar">BY</div>
+      <p>IIIT Ranchi • ECE • CGPA 9.29</p>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h3 class="section-title">About Me</h3>
+    <p class="section-text">I'm a second-year ECE student passionate about AI, Generative Models, Deep Learning, System Design, and Full‑Stack engineering. I love building clean and scalable products.</p>
+  </section>
+
+  <section id="projects" class="container section">
+    <h3 class="section-title">Projects</h3>
+    <div class="project-grid">
+      <div class="project-card glassy">
+        <h4>ChatPay — Paid Help Marketplace</h4>
+        <p>Production-ready system with escrow payments, expert profiles, AI‑smart matching, real-time chat and wallets.</p>
+        <a href="https://github.com/Brajkishore-yadav" target="_blank">View Repo</a>
+      </div>
+
+      <div class="project-card glassy">
+        <h4>Arovia — Health Monitor</h4>
+        <p>ESP32 streaming, real-time anomaly detection using Hugging Face APIs, alerts & live dashboards.</p>
+        <a href="https://github.com/Brajkishore-yadav" target="_blank">View Repo</a>
+      </div>
+
+      <div class="project-card glassy">
+        <h4>DreamSync (Research Idea)</h4>
+        <p>Concept for dream‑to‑visual reconstruction using brainwave preprocessing + generative models.</p>
+        <a href="#" target="_blank">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container section">
+    <h3 class="section-title">Get in Touch</h3>
+    <p>Email: <a class="accent" href="mailto:yadavbrajkishore678@gmail.com">yadavbrajkishore678@gmail.com</a></p>
+    <p>Phone: <a class="accent" href="tel:+919131647299">+91 91316 47299</a></p>
+    <p>LinkedIn: <a class="accent" href="https://www.linkedin.com/in/brajkishore-yadav-b8337331b/" target="_blank">linkedin.com/in/brajkishoreyadav</a></p>
+    <p>GitHub: <a class="accent" href="https://github.com/Brajkishore-yadav" target="_blank">github.com/Brajkishore-yadav</a></p>
+  </section>
+
+  <footer class="footer glassy">
+    <p>© <span id="year"></span> Brajkishore Yadav — Built with passion ⚡</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
