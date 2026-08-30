@@ -1,25 +1,295 @@
 <!-- FILE: resume.html -->
+
 <!doctype html>
 <html lang="en">
+
 <head>
+
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
   <title>Brajkishore Yadav — Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <meta
+    name="description"
+    content="Brajkishore Yadav — Full Stack Developer | MERN Stack | Backend Development"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
-    body { margin:0; background:#0b0f19; font-family:'Inter',sans-serif; color:white; }
-    .topbar { padding:1rem; background:rgba(255,255,255,0.06); backdrop-filter:blur(8px); display:flex; justify-content:space-between; align-items:center; }
-    a { color:#6e8cff; text-decoration:none; font-weight:500; }
-    .viewer { width:100%; height:calc(100vh - 60px); border:none; }
+
+    :root {
+      --bg: #080b12;
+      --text: #f1f4fa;
+      --muted: #9aa4b2;
+      --accent: #6e8cff;
+      --accent-soft: rgba(110, 140, 255, 0.12);
+      --border: rgba(255, 255, 255, 0.09);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 50% -20%,
+          rgba(110, 140, 255, 0.12),
+          transparent 35%
+        ),
+        var(--bg);
+
+      color: var(--text);
+
+      font-family: "Inter", sans-serif;
+    }
+
+    /* ================= TOP BAR ================= */
+
+    .topbar {
+
+      position: fixed;
+
+      top: 12px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: min(1100px, 94%);
+
+      height: 58px;
+
+      padding: 0 18px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 1rem;
+
+      background: rgba(8, 11, 18, 0.78);
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.3);
+
+      z-index: 10;
+    }
+
+    /* ================= TITLE ================= */
+
+    .resume-title {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      font-size: 0.9rem;
+
+      font-weight: 600;
+
+      white-space: nowrap;
+    }
+
+    .resume-icon {
+
+      width: 32px;
+      height: 32px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 9px;
+
+      background: var(--accent-soft);
+
+      border: 1px solid rgba(110, 140, 255, 0.2);
+
+      font-size: 0.95rem;
+    }
+
+    .resume-title span {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ================= BACK BUTTON ================= */
+
+    .back-btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 8px 13px;
+
+      border-radius: 9px;
+
+      border: 1px solid rgba(110, 140, 255, 0.35);
+
+      background: rgba(110, 140, 255, 0.05);
+
+      color: var(--accent);
+
+      text-decoration: none;
+
+      font-size: 0.8rem;
+
+      font-weight: 600;
+
+      transition: all 0.25s ease;
+    }
+
+    .back-btn:hover {
+
+      background: var(--accent-soft);
+
+      border-color: rgba(110, 140, 255, 0.6);
+
+      transform: translateX(-2px);
+    }
+
+    /* ================= PDF VIEWER ================= */
+
+    .viewer {
+
+      position: absolute;
+
+      top: 82px;
+
+      left: 0;
+
+      width: 100%;
+
+      height: calc(100vh - 82px);
+
+      border: none;
+
+      background: #11151f;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 600px) {
+
+      .topbar {
+
+        width: 94%;
+
+        height: 52px;
+
+        top: 8px;
+
+        padding: 0 11px;
+
+      }
+
+      .resume-title {
+
+        font-size: 0.76rem;
+
+      }
+
+      .resume-icon {
+
+        width: 28px;
+        height: 28px;
+
+        font-size: 0.8rem;
+      }
+
+      .back-btn {
+
+        padding: 7px 9px;
+
+        font-size: 0.72rem;
+      }
+
+      .viewer {
+
+        top: 68px;
+
+        height: calc(100vh - 68px);
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 <body>
-  <div class="topbar">
-    <span>📄 Brajkishore Yadav — Resume Viewer</span>
-    <a href="index.html">← Back to Portfolio</a>
-  </div>
 
-  <iframe class="viewer" src="BrajkishoreYadavResumeW.pdf"></iframe>
+  <!-- ================= TOP BAR ================= -->
+
+  <header class="topbar">
+
+    <div class="resume-title">
+
+      <div class="resume-icon">
+        📄
+      </div>
+
+      <div>
+        Brajkishore Yadav
+        <span>— Resume</span>
+      </div>
+
+    </div>
+
+
+    <a
+      class="back-btn"
+      href="index.html"
+    >
+      ← Back to Portfolio
+    </a>
+
+  </header>
+
+
+  <!-- ================= PDF ================= -->
+
+  <iframe
+    class="viewer"
+    src="BrajkishoreYadavResumeW.pdf"
+    title="Brajkishore Yadav Resume"
+  ></iframe>
+
+
 </body>
-</html>
 
+</html>
